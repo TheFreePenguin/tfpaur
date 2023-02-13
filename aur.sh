@@ -4,6 +4,6 @@ else
 set -e
 mkdir /tmp/tfpaur
 cd /tmp/tfpaur
-git clone "https://aur.archlinux.org/"${1}".git"
+git clone "https://aur.archlinux.org/${1}.git"
 cd ${1}
 makepkg -si
