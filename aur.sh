@@ -1,4 +1,4 @@
-if $1 = ""; then
+if [ $1 = "" ]; then
   echo "Please enter a valid package name."
 else
 set -e
