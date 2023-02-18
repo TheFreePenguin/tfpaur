@@ -2,8 +2,8 @@ echo "Enter the packages you wish to install, one at a time. When you wish to co
 rm -rf /tmp/tfpaur
 mkdir -p /tmp/tfpaur
 cd /tmp/tfpaur
-read
 while true; do
+read
 if [ $REPLY = "EOF" ]; then
 for i in `cat /tmp/tfpaur/packages.txt`
 do
