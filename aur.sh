@@ -1,11 +1,11 @@
-if [ $1 = "" ]; then
-  echo "Please enter a valid package name."
-else
+echo "Enter the packages you wish to install, one at a time. When you wish to continue, type EOF." 
 rm -rf /tmp/tfpaur
-set -e
-mkdir /tmp/tfpaur
+mkdir -p /tmp/tfpaur
+cat << EOF > /tmp/tfpaur/packages.txt
+for i in `cat /tmp/tfpaur/packages.txt`
+do
 cd /tmp/tfpaur
-git clone "https://aur.archlinux.org/$1.git"
+git clone "https://aur.archlinux.org/$i.git" 
 cd ${1}
 makepkg -si
-fi
+done
