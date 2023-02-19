@@ -9,7 +9,7 @@ for i in `cat /tmp/tfpaur/packages.txt`
 do
 cd /tmp/tfpaur
 git clone "https://aur.archlinux.org/$i.git" 
-cd ${1}
+cd ${i}
 makepkg -si
 exit 0
 done
